@@ -10,16 +10,13 @@ const api = require('./backend/routes');
 
 app.use('/api',api);
 
-if(process.env.NODE_ENV==='production'){
+// Todo código precisa ficar depois das rotas conhecidas
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('frontend/build'))
 
-    app.use(express.static('frontend/build'));
-
-    const path = require('path');
-
-    app.get('*',(req,res)=>{
-
-      res.sendFile(path.resolve(__dirname,'frontend','build','index.html'));
-
+    const path = require('path')
+    app.get('*', (req, res)=>{
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
     })
 }
 
