@@ -6,7 +6,7 @@ const app = express();
 require('dotenv').config();
 app.use(bodyParser.json());
 
-const api = require('./backend/routes');
+const api = require('./backend/routes/');
 
 app.use('/api',api);
 
