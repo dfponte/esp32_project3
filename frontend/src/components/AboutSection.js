@@ -20,9 +20,7 @@ const AboutSection = ()=>{
                  <button>Contact Me</button>
          </Description>
             
-        <image>
-           <img src=""/>
-        </image>
+       
 
         
          
