@@ -21,9 +21,10 @@ if(process.env.NODE_ENV === 'production'){
     })
 }
 
-PORT=process.env.PORT;
+PORT=process.env.PORT || 3080;
 app.listen(PORT,function(){
     
         console.log('Servidor ON');
+        console.log(process.env.PORT);
     
 });
